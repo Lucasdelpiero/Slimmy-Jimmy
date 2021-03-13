@@ -1,0 +1,221 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Control/menu_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Control/Buttons/OptionsButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Control/Buttons/ExitButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Control/Buttons/ResumeButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Control/Buttons.gd" type="Script" id=5]
+[ext_resource path="res://Control/Buttons/BackButton.tscn" type="PackedScene" id=6]
+
+[node name="OptionsLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -206.0
+margin_top = -252.0
+margin_right = 131.0
+margin_bottom = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+margin_left = 27.0
+margin_top = 32.0
+margin_right = 295.0
+margin_bottom = 313.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResumeButton" parent="Control/Panel/VBoxContainer" instance=ExtResource( 4 )]
+margin_right = 288.0
+margin_bottom = 81.0
+
+[node name="OptionsButton" parent="Control/Panel/VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 99.0
+margin_right = 288.0
+margin_bottom = 181.0
+size_flags_horizontal = 1
+
+[node name="ExitButton" parent="Control/Panel/VBoxContainer" instance=ExtResource( 3 )]
+margin_top = 199.0
+margin_right = 288.0
+margin_bottom = 281.0
+
+[node name="OptionsPannel" type="Panel" parent="Control"]
+visible = false
+anchor_left = 0.214
+anchor_top = 0.247
+anchor_right = 0.781
+anchor_bottom = 0.642
+margin_left = -60.136
+margin_top = -73.2
+margin_right = 77.256
+margin_bottom = 68.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/OptionsPannel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 682.0
+margin_bottom = 242.52
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreenContainer" type="HBoxContainer" parent="Control/OptionsPannel/VBoxContainer"]
+margin_right = 675.0
+margin_bottom = 58.0
+
+[node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/FullScreenContainer"]
+margin_right = 217.0
+margin_bottom = 50.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Fullscreen: "
+
+[node name="CheckBoxFullScreen" type="CheckBox" parent="Control/OptionsPannel/VBoxContainer/FullScreenContainer"]
+margin_left = 221.0
+margin_right = 285.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 64, 32 )
+
+[node name="ResolutionContainer" type="HBoxContainer" parent="Control/OptionsPannel/VBoxContainer"]
+margin_top = 62.0
+margin_right = 675.0
+margin_bottom = 118.0
+
+[node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/ResolutionContainer"]
+margin_top = 3.0
+margin_right = 429.0
+margin_bottom = 53.0
+text = "Windowed Resolution: "
+
+[node name="OptionButton" type="OptionButton" parent="Control/OptionsPannel/VBoxContainer/ResolutionContainer"]
+margin_left = 433.0
+margin_right = 675.0
+margin_bottom = 56.0
+text = "1280x1024"
+items = [ "1280x1024", null, false, 0, null, "1366x768", null, false, 3, null, "1920x1080", null, false, 2, null ]
+selected = 0
+
+[node name="GlobalContainter" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
+margin_top = 122.0
+margin_right = 675.0
+margin_bottom = 122.0
+
+[node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/GlobalContainter"]
+margin_top = 16.0
+margin_right = 218.0
+margin_bottom = 52.0
+text = "Global Volume : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderGlobal" type="HSlider" parent="Control/OptionsPannel/VBoxContainer/GlobalContainter"]
+anchor_top = 0.334
+anchor_right = 0.189
+anchor_bottom = 0.334
+margin_left = 321.999
+margin_top = 33.7628
+margin_right = 475.42
+margin_bottom = 49.7628
+min_value = -20.0
+max_value = 6.0
+value = -6.0
+
+[node name="MusicContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
+margin_top = 126.0
+margin_right = 675.0
+margin_bottom = 126.0
+
+[node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/MusicContainer"]
+margin_top = 62.0
+margin_right = 311.0
+margin_bottom = 112.0
+text = "Music Volume  : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderMusic" type="HSlider" parent="Control/OptionsPannel/VBoxContainer/MusicContainer"]
+anchor_top = 0.334
+anchor_right = 0.189
+anchor_bottom = 0.334
+margin_left = 322.706
+margin_top = 78.4661
+margin_right = 476.127
+margin_bottom = 94.4661
+min_value = -20.0
+max_value = 6.0
+value = -6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
+margin_top = 130.0
+margin_right = 675.0
+margin_bottom = 130.0
+
+[node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/SFXContainer"]
+margin_left = 1.0
+margin_top = 116.0
+margin_right = 214.0
+margin_bottom = 152.0
+text = "SFX Volume      :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SliderSFX" type="HSlider" parent="Control/OptionsPannel/VBoxContainer/SFXContainer"]
+anchor_top = 0.334
+anchor_right = 0.189
+anchor_bottom = 0.334
+margin_left = 326.242
+margin_top = 132.399
+margin_right = 479.662
+margin_bottom = 148.399
+min_value = -20.0
+max_value = 6.0
+value = -6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" parent="Control/OptionsPannel" instance=ExtResource( 6 )]
+margin_left = 18.5525
+margin_top = 309.595
+margin_right = 124.552
+margin_bottom = 365.595
+[connection signal="pressed" from="Control/Panel/VBoxContainer/ResumeButton" to="Control" method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/OptionsButton" to="Control" method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/ExitButton" to="Control" method="_on_ExitButton_pressed"]
+[connection signal="toggled" from="Control/OptionsPannel/VBoxContainer/FullScreenContainer/CheckBoxFullScreen" to="Control" method="_on_CheckBoxFullScreen_toggled"]
+[connection signal="item_selected" from="Control/OptionsPannel/VBoxContainer/ResolutionContainer/OptionButton" to="Control" method="_on_OptionButton_item_selected"]
+[connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/GlobalContainter/SliderGlobal" to="Control" method="_on_SliderGlobal_value_changed"]
+[connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/MusicContainer/SliderMusic" to="Control" method="_on_SliderMusic_value_changed"]
+[connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/SFXContainer/SliderSFX" to="Control" method="_on_SliderSFX_value_changed"]
+[connection signal="pressed" from="Control/OptionsPannel/BackButton" to="Control" method="_on_BackButton_pressed"]

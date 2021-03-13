@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wyver9_Thorns&Ropes(8-bit).ogg-29b125ff64ee8b83521d3cc830b8af54.oggstr"
+
+[deps]
+
+source_file="res://Audio/wyver9_Thorns&Ropes(8-bit).ogg"
+dest_files=[ "res://.import/wyver9_Thorns&Ropes(8-bit).ogg-29b125ff64ee8b83521d3cc830b8af54.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

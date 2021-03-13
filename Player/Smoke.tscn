@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemies/Fire.tscn" type="PackedScene" id=1]
+
+[node name="Smoke" instance=ExtResource( 1 )]
+modulate = Color( 0.168627, 0.807843, 0.0392157, 0.278431 )
+scale = Vector2( 2, 2 )
+
+[node name="Particles2D" parent="." index="0"]
+position = Vector2( 0.840897, -40.363 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+disabled = true
