@@ -21,7 +21,6 @@ tile_data = PoolIntArray( -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -131083, 
 position = Vector2( -282.708, -260.736 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( -347.973, -3.83946 )
 
 [node name="EnemyHeavy2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 128.92, -259.73 )

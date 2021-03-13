@@ -17,7 +17,7 @@ var STATE = NORMAL
 
 var Corpse = preload("res://Player/PlayerDead.tscn")
 var Spawner = preload("res://Player/Spawner.tscn")
-var Splash = preload("res://Player/Splash.tscn")
+var Splash = preload("res://Player/SplashCPU.tscn")
 var sprite_normal = preload("res://Player/slime.png")
 var sprite_gas = preload("res://Player/slime_gas.png")
 var spawner_position 

@@ -11,7 +11,6 @@
 
 [node name="Control" type="Control" parent="."]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
@@ -61,7 +60,6 @@ margin_right = 288.0
 margin_bottom = 281.0
 
 [node name="OptionsPannel" type="Panel" parent="Control"]
-visible = false
 anchor_left = 0.214
 anchor_top = 0.247
 anchor_right = 0.781
@@ -85,6 +83,7 @@ __meta__ = {
 }
 
 [node name="FullScreenContainer" type="HBoxContainer" parent="Control/OptionsPannel/VBoxContainer"]
+visible = false
 margin_right = 675.0
 margin_bottom = 58.0
 
@@ -102,9 +101,9 @@ margin_bottom = 58.0
 rect_min_size = Vector2( 64, 32 )
 
 [node name="ResolutionContainer" type="HBoxContainer" parent="Control/OptionsPannel/VBoxContainer"]
-margin_top = 62.0
+visible = false
 margin_right = 675.0
-margin_bottom = 118.0
+margin_bottom = 56.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/ResolutionContainer"]
 margin_top = 3.0
@@ -121,9 +120,7 @@ items = [ "1280x1024", null, false, 0, null, "1366x768", null, false, 3, null, "
 selected = 0
 
 [node name="GlobalContainter" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
-margin_top = 122.0
 margin_right = 675.0
-margin_bottom = 122.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/GlobalContainter"]
 margin_top = 16.0
@@ -147,9 +144,9 @@ max_value = 6.0
 value = -6.0
 
 [node name="MusicContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
-margin_top = 126.0
+margin_top = 4.0
 margin_right = 675.0
-margin_bottom = 126.0
+margin_bottom = 4.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/MusicContainer"]
 margin_top = 62.0
@@ -176,9 +173,9 @@ __meta__ = {
 }
 
 [node name="SFXContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
-margin_top = 130.0
+margin_top = 8.0
 margin_right = 675.0
-margin_bottom = 130.0
+margin_bottom = 8.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/SFXContainer"]
 margin_left = 1.0

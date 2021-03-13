@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.0909091, 0.313131, 0.707071, 1 )
+colors = PoolColorArray( 0.992188, 0.98056, 0.98056, 1, 0.967035, 0.96875, 0.749268, 1, 0.980469, 0.657017, 0.0995789, 1, 0.992188, 0.177315, 0.0930176, 1, 0.144531, 0.0107269, 0.0107269, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, -0.359032, 0, 0, Vector2( 1, 0.185227 ), -1.83, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 1
+emission_sphere_radius = 16.0
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 10.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 80.0
+initial_velocity_random = 0.2
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 25.0
+scale = 16.0
+scale_random = 0.2
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 13.8598, 19.0468 )
+
+[node name="Fire" type="Area2D" groups=[
+"fire",
+]]
+collision_layer = 8
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 64
+speed_scale = 1.4
+process_material = SubResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.471939, -0.943878 )
+shape = SubResource( 6 )
