@@ -11,6 +11,7 @@
 
 [node name="Control" type="Control" parent="."]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
@@ -60,23 +61,25 @@ margin_right = 288.0
 margin_bottom = 281.0
 
 [node name="OptionsPannel" type="Panel" parent="Control"]
+visible = false
 anchor_left = 0.214
 anchor_top = 0.247
 anchor_right = 0.781
 anchor_bottom = 0.642
-margin_left = -60.136
-margin_top = -73.2
-margin_right = 77.256
-margin_bottom = 68.8
+margin_left = 7.07999
+margin_top = -10.928
+margin_right = -58.6801
+margin_bottom = -51.408
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/OptionsPannel"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 682.0
-margin_bottom = 242.52
+margin_left = 20.0
+margin_top = 18.0
+margin_right = 742.0
+margin_bottom = 277.0
 theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -120,7 +123,7 @@ items = [ "1280x1024", null, false, 0, null, "1366x768", null, false, 3, null, "
 selected = 0
 
 [node name="GlobalContainter" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
-margin_right = 675.0
+margin_right = 722.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/GlobalContainter"]
 margin_top = 16.0
@@ -142,10 +145,13 @@ margin_bottom = 49.7628
 min_value = -20.0
 max_value = 6.0
 value = -6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MusicContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
 margin_top = 4.0
-margin_right = 675.0
+margin_right = 722.0
 margin_bottom = 4.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/MusicContainer"]
@@ -174,7 +180,7 @@ __meta__ = {
 
 [node name="SFXContainer" type="Control" parent="Control/OptionsPannel/VBoxContainer"]
 margin_top = 8.0
-margin_right = 675.0
+margin_right = 722.0
 margin_bottom = 8.0
 
 [node name="Label" type="Label" parent="Control/OptionsPannel/VBoxContainer/SFXContainer"]
@@ -203,15 +209,13 @@ __meta__ = {
 }
 
 [node name="BackButton" parent="Control/OptionsPannel" instance=ExtResource( 6 )]
-margin_left = 18.5525
-margin_top = 309.595
-margin_right = 124.552
-margin_bottom = 365.595
+margin_left = 24.4744
+margin_top = 261.397
+margin_right = 130.474
+margin_bottom = 317.397
 [connection signal="pressed" from="Control/Panel/VBoxContainer/ResumeButton" to="Control" method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="Control/Panel/VBoxContainer/OptionsButton" to="Control" method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="Control/Panel/VBoxContainer/ExitButton" to="Control" method="_on_ExitButton_pressed"]
-[connection signal="toggled" from="Control/OptionsPannel/VBoxContainer/FullScreenContainer/CheckBoxFullScreen" to="Control" method="_on_CheckBoxFullScreen_toggled"]
-[connection signal="item_selected" from="Control/OptionsPannel/VBoxContainer/ResolutionContainer/OptionButton" to="Control" method="_on_OptionButton_item_selected"]
 [connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/GlobalContainter/SliderGlobal" to="Control" method="_on_SliderGlobal_value_changed"]
 [connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/MusicContainer/SliderMusic" to="Control" method="_on_SliderMusic_value_changed"]
 [connection signal="value_changed" from="Control/OptionsPannel/VBoxContainer/SFXContainer/SliderSFX" to="Control" method="_on_SliderSFX_value_changed"]

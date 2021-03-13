@@ -66,6 +66,19 @@ to JUMP"
 position = Vector2( 130.49, 28.7175 )
 texture = ExtResource( 14 )
 
+[node name="Tutorial3" parent="Panels" instance=ExtResource( 11 )]
+margin_left = 93.7728
+margin_top = -596.857
+margin_right = 349.773
+margin_bottom = -432.857
+
+[node name="Label" parent="Panels/Tutorial3" index="0"]
+margin_right = 252.0
+margin_bottom = 160.0
+text = "TAB / O / P 
+to 
+PAUSE"
+
 [node name="TutorialPanel" parent="Panels" instance=ExtResource( 11 )]
 margin_left = 2034.86
 margin_top = -640.0
@@ -204,6 +217,8 @@ next_level = ExtResource( 7 )
 [editable path="Panels/Tutorial"]
 
 [editable path="Panels/Tutorial2"]
+
+[editable path="Panels/Tutorial3"]
 
 [editable path="Panels/TutorialPanel"]
 

@@ -28,9 +28,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen"]
-margin_left = -112.444
+margin_left = -112.0
 margin_top = -64.0
-margin_right = 112.556
+margin_right = 113.0
 margin_bottom = 112.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,6 +53,7 @@ margin_right = 225.0
 margin_bottom = 176.0
 
 [node name="ExitButton" parent="TitleScreen/VBoxContainer" instance=ExtResource( 3 )]
+visible = false
 margin_top = 180.0
 margin_right = 225.0
 margin_bottom = 236.0
@@ -62,15 +63,16 @@ size_flags_vertical = 1
 [node name="OptionsPannel" type="Panel" parent="TitleScreen"]
 visible = false
 anchor_left = 0.214
-anchor_top = 0.157
-anchor_right = 0.924
-anchor_bottom = 0.853
-margin_left = -319.56
-margin_top = -167.28
-margin_right = 402.04
-margin_bottom = 210.88
+anchor_top = 0.247
+anchor_right = 0.781
+anchor_bottom = 0.642
+margin_left = -271.846
+margin_top = -128.217
+margin_right = 365.474
+margin_bottom = 219.983
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen/OptionsPannel"]
@@ -84,6 +86,7 @@ __meta__ = {
 }
 
 [node name="FullScreenContainer" type="HBoxContainer" parent="TitleScreen/OptionsPannel/VBoxContainer"]
+visible = false
 margin_right = 675.0
 margin_bottom = 58.0
 
@@ -102,9 +105,9 @@ rect_min_size = Vector2( 64, 32 )
 pressed = true
 
 [node name="ResolutionContainer" type="HBoxContainer" parent="TitleScreen/OptionsPannel/VBoxContainer"]
-margin_top = 62.0
+visible = false
 margin_right = 675.0
-margin_bottom = 118.0
+margin_bottom = 56.0
 
 [node name="Label" type="Label" parent="TitleScreen/OptionsPannel/VBoxContainer/ResolutionContainer"]
 margin_top = 3.0
@@ -121,9 +124,7 @@ items = [ "1280x1024", null, false, 0, null, "1366x768", null, false, 3, null, "
 selected = 0
 
 [node name="GlobalContainter" type="Control" parent="TitleScreen/OptionsPannel/VBoxContainer"]
-margin_top = 122.0
 margin_right = 675.0
-margin_bottom = 122.0
 
 [node name="Label" type="Label" parent="TitleScreen/OptionsPannel/VBoxContainer/GlobalContainter"]
 margin_top = 16.0
@@ -147,9 +148,9 @@ max_value = 6.0
 value = -6.0
 
 [node name="MusicContainer" type="Control" parent="TitleScreen/OptionsPannel/VBoxContainer"]
-margin_top = 126.0
+margin_top = 4.0
 margin_right = 675.0
-margin_bottom = 126.0
+margin_bottom = 4.0
 
 [node name="Label" type="Label" parent="TitleScreen/OptionsPannel/VBoxContainer/MusicContainer"]
 margin_top = 62.0
@@ -176,9 +177,9 @@ __meta__ = {
 }
 
 [node name="SFXContainer" type="Control" parent="TitleScreen/OptionsPannel/VBoxContainer"]
-margin_top = 130.0
+margin_top = 8.0
 margin_right = 675.0
-margin_bottom = 130.0
+margin_bottom = 8.0
 
 [node name="Label" type="Label" parent="TitleScreen/OptionsPannel/VBoxContainer/SFXContainer"]
 margin_left = 1.0
